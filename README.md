@@ -7,6 +7,10 @@
 [![License](https://poser.pugx.org/paragonie/doctrine-ciphersweet/license)](https://packagist.org/packages/paragonie/doctrine-cipher)
 [![Downloads](https://img.shields.io/packagist/dt/paragonie/doctrine-cipher.svg)](https://packagist.org/packages/paragonie/doctrine-cipher)
 
+> [!IMPORTANT]
+> This adapter is still being developed. It's only being open sourced so
+> it may be tested in a Symfony application. Please don't use it yet.
+
 Use searchable encryption with [Doctrine ORM](https://github.com/doctrine/orm), powered by 
 [CipherSweet](https://ciphersweet.paragonie.com/).
 
