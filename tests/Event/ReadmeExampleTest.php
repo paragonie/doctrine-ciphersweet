@@ -3,30 +3,43 @@ declare(strict_types=1);
 
 namespace ParagonIE\DoctrineCipher\Tests\Event;
 
+use Doctrine\DBAL\DriverManager;
 use Doctrine\ORM\EntityManager;
+use Doctrine\ORM\Exception\ORMException;
+use Doctrine\ORM\OptimisticLockException;
 use Doctrine\ORM\ORMSetup;
 use Doctrine\ORM\Tools\SchemaTool;
 use ParagonIE\CipherSweet\CipherSweet;
+use ParagonIE\CipherSweet\Exception\BlindIndexNameCollisionException;
+use ParagonIE\CipherSweet\Exception\BlindIndexNotFoundException;
+use ParagonIE\CipherSweet\Exception\CipherSweetException;
+use ParagonIE\CipherSweet\Exception\CryptoOperationException;
 use ParagonIE\CipherSweet\KeyProvider\StringProvider;
 use ParagonIE\CipherSweet\BlindIndex;
 use ParagonIE\CipherSweet\EncryptedField;
 use ParagonIE\CipherSweet\Transformation\Lowercase;
 use ParagonIE\DoctrineCipher\Event\EncryptedFieldSubscriber;
 use ParagonIE\DoctrineCipher\Tests\TestEntity\Message;
+use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
+use SodiumException;
 
+#[CoversClass(EncryptedFieldSubscriber::class)]
 class ReadmeExampleTest extends TestCase
 {
     private EntityManager $entityManager;
     private CipherSweet $engine;
 
+    /**
+     * @throws CryptoOperationException
+     */
     public function setUp(): void
     {
         $config = ORMSetup::createAttributeMetadataConfiguration(
             paths: [__DIR__ . '/../TestEntity'],
             isDevMode: true,
         );
-        $conn = \Doctrine\DBAL\DriverManager::getConnection([
+        $conn = DriverManager::getConnection([
             'driver' => 'pdo_sqlite',
             'memory' => true,
         ]);
@@ -45,6 +58,15 @@ class ReadmeExampleTest extends TestCase
         ]);
     }
 
+    /**
+     * @throws CipherSweetException
+     * @throws ORMException
+     * @throws SodiumException
+     * @throws BlindIndexNameCollisionException
+     * @throws OptimisticLockException
+     * @throws CryptoOperationException
+     * @throws BlindIndexNotFoundException
+     */
     public function testReadmeExample(): void
     {
         $secretMessage = 'This is a secret message.';
