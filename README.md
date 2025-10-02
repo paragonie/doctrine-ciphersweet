@@ -3,10 +3,10 @@
 [![Build Status](https://github.com/paragonie/doctrine-ciphersweet/actions/workflows/ci.yml/badge.svg)](https://github.com/paragonie/doctrine-ciphersweet/actions)
 [![Example App](https://github.com/paragonie/doctrine-ciphersweet/actions/workflows/example-app.yml/badge.svg)](https://github.com/paragonie/doctrine-ciphersweet/tree/main/docs/example-app)
 [![Static Analysis](https://github.com/paragonie/doctrine-ciphersweet/actions/workflows/psalm.yml/badge.svg)](https://github.com/paragonie/doctrine-ciphersweet/actions)
-[![Latest Stable Version](https://poser.pugx.org/paragonie/doctrine-ciphersweet/v/stable)](https://packagist.org/packages/paragonie/doctrine-cipher)
-[![Latest Unstable Version](https://poser.pugx.org/paragonie/doctrine-ciphersweet/v/unstable)](https://packagist.org/packages/paragonie/doctrine-cipher)
-[![License](https://poser.pugx.org/paragonie/doctrine-ciphersweet/license)](https://packagist.org/packages/paragonie/doctrine-cipher)
-[![Downloads](https://img.shields.io/packagist/dt/paragonie/doctrine-cipher.svg)](https://packagist.org/packages/paragonie/doctrine-cipher)
+[![Latest Stable Version](https://poser.pugx.org/paragonie/doctrine-ciphersweet/v/stable)](https://packagist.org/packages/paragonie/doctrine-cipherrsweet)
+[![Latest Unstable Version](https://poser.pugx.org/paragonie/doctrine-ciphersweet/v/unstable)](https://packagist.org/packages/paragonie/doctrine-cipherrsweet)
+[![License](https://poser.pugx.org/paragonie/doctrine-ciphersweet/license)](https://packagist.org/packages/paragonie/doctrine-ciphersweet)
+[![Downloads](https://img.shields.io/packagist/dt/paragonie/doctrine-ciphersweet.svg)](https://packagist.org/packages/paragonie/doctrine-ciphersweet)
 
 > [!IMPORTANT]
 > This adapter is still being developed. It's only being open sourced so
