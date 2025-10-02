@@ -1,0 +1,12 @@
+services:
+    _defaults:
+        public: true
+
+    ParagonIE\CipherSweet\KeyProvider\StringProvider:
+        factory: ['App\Factory\CipherSweetKeyProviderFactory', 'create']
+        arguments:
+            - '%env(CIPHERSWEET_KEY)%'
+
+    ParagonIE\CipherSweet\CipherSweet:
+        arguments:
+            - '@ParagonIE\CipherSweet\KeyProvider\StringProvider'
