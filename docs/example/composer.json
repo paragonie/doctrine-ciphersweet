@@ -11,7 +11,7 @@
         "ext-iconv": "*",
         "doctrine/doctrine-bundle": "^2.16.2",
         "doctrine/orm": "^3.5.2",
-        "paragonie/doctrine-ciphersweet": "dev-example-app",
+        "paragonie/doctrine-ciphersweet": "dev-main",
         "symfony/console": "7.3.*",
         "symfony/dotenv": "7.3.*",
         "symfony/expression-language": "7.3.*",
