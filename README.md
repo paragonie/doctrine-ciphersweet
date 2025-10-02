@@ -1,4 +1,4 @@
-# Doctrine CipherSweet Adapter
+# Doctrine-CipherSweet Adapter
 
 [![Build Status](https://github.com/paragonie/doctrine-ciphersweet/actions/workflows/ci.yml/badge.svg)](https://github.com/paragonie/doctrine-ciphersweet/actions)
 [![Example App](https://github.com/paragonie/doctrine-ciphersweet/actions/workflows/example-app.yml/badge.svg)](https://github.com/paragonie/doctrine-ciphersweet/tree/main/docs/example-app)
